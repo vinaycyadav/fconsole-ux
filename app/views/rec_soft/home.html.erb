@@ -1,0 +1,25 @@
+<h1>Welcome to RecruiterSoft.</h1>
+
+<table>
+  <thead>
+  <tr>
+    <th>ID</th>
+    <th>Name</th>
+    <th>Email</th>
+    <th>Zip</th>
+    <th colspan="3">Actions</th>
+  </tr>
+  </thead>
+
+  <tbody>
+  <% $hash_recruiters.each do |k,record| %>
+      <tr>
+        <td><%= k %></td>
+        <td><%= record.Name %></td>
+        <td><%= record.Email %></td>
+        <td><%= record.Zip %></td>
+        <td><a href="/rec_soft/dropsoft?recruiter_id=<%= k %>">Delete</a></td>
+      </tr>
+  <% end %>
+  </tbody>
+</table>
